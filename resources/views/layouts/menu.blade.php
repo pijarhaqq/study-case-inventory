@@ -3,14 +3,14 @@
         <li class="menu-title">Main</li>
 
         <li>
-            <a href="index.html" class="waves-effect">
+            <a href="home" class="waves-effect">
                 <i class="mdi mdi-airplay"></i>
                 <span> Dashboard </span>
             </a>
         </li>
 
         <li>
-            <a href="index.html" class="waves-effect">
+            <a href="{{route('petugas.index')}}" class="waves-effect">
                 <i class="mdi mdi-account-multiple"></i>
                 <span> Petugas </span>
             </a>

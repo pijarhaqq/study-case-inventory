@@ -104,14 +104,17 @@
                     <div class="table-responsive">
                         <table class="table table-hover" id="datatable-buttons">
                             <thead>
+                                <th>No.</th>
                                 <th>Nama Lengkap</th>
                                 <th>Nama Pengguna (Username)</th>
                                 <th>Status Aktif</th>
+                                <th>Aksi</th>
                             </thead>
                             <tbody>
                                 @foreach ($data as $item)
                                     @if (!$item->isAdmin)
                                     <tr>
+                                        <td>{{$item->id}}</td>
                                         <td>{{$item->name}}</td>
                                         <td>{{$item->username}}</td>
                                         <td>
@@ -120,6 +123,9 @@
                                             @else
                                             <span class="badge badge-danger">Non-Aktif</span>                                            
                                             @endif
+                                        </td>
+                                        <td>
+                                            <a href="{{route('petugas.show',$item->id)}}" class="btn btn-warning">Detail</a>
                                         </td>
                                     </tr>
                                     @endif                             
